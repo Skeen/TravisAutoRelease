@@ -1,3 +1,12 @@
 language: cpp
 
 script: make && make test
+
+deploy:
+  provider: releases
+  api_key:
+    secure: "lAqP/gbEdvxePqREYTHBPLPfSLc7QiOoiQUr/UviFGKOEevo10bkX4BSXVWAIHzqBFONFioGkV9MOLb2WOocB6sVWVOFu9YgoL74/1oR7O80fkRUyqN8xX71oRuDHKaRVBxNuPtU5gpPICZlmR/lpZSsfUaRZeqaU5fbUlfCT/BWf2wnJ7Ck/9JCd9/DnDrw3gVczxBLKGUyx8++v7F6kreRClzfCdaLFQaAPOTWOJcq8eGzvs8UPLQhdpsPnAEHomQRK9T2giYkUIx3bbaug06SngQusD7+6AQGZmUZiaKxQFdFXHKlMo7/c0Bb1NLovLKohFEIhdPa2FAi+gTQc1gSjNMsxZn+ptMmwUfA8ofrFYPNGgKADOYNxvIVdLIjWsBR2Zn55tQtUEhaSPRlRwOttQl9S3fKT8a3sn92Se5ezm5okQfpPD+sx9UXJU8Y69FGtOay2C1kOQRAGOnnqlO+Irps2aY/4qIzxbIxgNQ8oBVD4lXfP6mIWHfW5g35nxaNuDSUbd2wFaNyWjUNTBXdubHMZcIutDpOlfLRg2f3KtXBxD5RSH8jJI60s4rJYWyHmyzblIlW3cn2V+Bd+ANr5+b0spo0Pm8D5k6qNiVxhuXaBqAN+/JOudkeV/Yk1pyKAT12vSTgavqB0wOamGLFij4mlT/IWJi8qvGBTfw="
+  file: a.out
+  skip_cleanup: true
+  on:
+    tags: true
